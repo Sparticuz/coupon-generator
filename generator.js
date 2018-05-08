@@ -30,6 +30,4 @@ lowes = {
         let preCheck = "47000"+pad(getRandomInt(0,55000),5,"0")+pad(code,4,"0");
         return preCheck + this.getCheckDigit(preCheck);
     }
-}
-
-console.log(lowes.generateCoupon("600"));
+};
