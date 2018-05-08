@@ -1,64 +1,64 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Jumbotron Template for Bootstrap</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Coupon Generator</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  </head>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    </head>
 
-  <body>
+    <body>
 
-    <main role="main">
+        <main role="main">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">Coupon Generator</h1>
+                    <p>This site generates coupon codes</p>
+                </div>
+            </div>
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3">Coupon Generator</h1>
-          <p>This site generates coupon codes</p>
-        </div>
-      </div>
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Coupon Code</h2>
+                        <p>Please select a coupon code</p>
+                        <select class="form-control" id="code-value">
+                            <option value="0748">$10 off $50 (May 2018)</option>
+                            <option value="0595">$20 off $100 (May 2018)</option>
+                            <option value="0783">10% off (May 2018)</option>
+                        </select>
+                        <p>Or enter it <a href="https://slickdeals.net/f/9549456-lowe-s-10-15-50-off-online-coupons-sharing-only-no-off-topic#post93883968">manually</a></p>
+                        <p><input class="form-control" id="custom-value"/></p>
+                        <p><a class="btn btn-primary" href="#" role="button" id="generate-coupon">Generate Coupon</a></p>
+                    </div>
+                    <div class="col-md-8">
+                        <h2 id="code-placeholder"></h2>
+                        <svg id="barcode-placeholder" class="img-fluid"></svg>
+                    </div>
+                </div>
 
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Coupon Code</h2>
-            <p>Please select a coupon code</p>
-            <select class="form-control">
-              <option>$10 off $50</option>
-              <option>$20 off $100</option>
-              <option>10% off</option>
-            </select>
-            <p>Or enter it manually</p>
-            <p><input class="form-control"/></p>
-            <p><a class="btn btn-primary" href="#" role="buton">Generate Coupon</a></p>
-          </div>
-          <div class="col-md-8">
-            <h2>Code</h2>
-            <p>Barcode</p>
-          </div>
-        </div>
+                <hr>
 
-        <hr>
+            </div> <!-- /container -->
 
-      </div> <!-- /container -->
+        </main>
 
-    </main>
+        <footer class="container">
+            <p>&nbsp;</p>
+        </footer>
 
-    <footer class="container">
-      <p>&copy; Company 2017-2018</p>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.8.0/dist/barcodes/JsBarcode.code128.min.js"></script>
-</body>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.8.0/dist/barcodes/JsBarcode.code39.min.js"></script>
+        <script src="generator.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>
