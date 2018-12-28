@@ -1,16 +1,14 @@
 let submitButton = document.getElementById('generate-coupon');
 submitButton.addEventListener('click', () =>{
     //This will run when the generate coupon button is clicked
-    const coupon = document.getElementById('code-value');
+    const prefix = document.getElementById('prefix');
     const custom = document.getElementById('custom-value');
 
-    let code;
+    //This generates the code
+    const couponCode = lowes.generateCoupon(prefix.value, custom.value);
 
-    if(custom.value != ''){
-        code = custom.value;
-    } else {
-        code = coupon.value;
-    }
+    // let codePlaceholder = document.getElementById('code-placeholder');
+    // codePlaceholder.innerHTML = couponCode;
 
     //This generates the code
     const couponCode = lowes.generateCoupon(code);
@@ -21,5 +19,5 @@ submitButton.addEventListener('click', () =>{
     //Now, create the barcode
     JsBarcode('#barcode-placeholder',couponCode,{
         format: 'CODE39'
-    })
+    });
 });

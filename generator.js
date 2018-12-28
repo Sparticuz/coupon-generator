@@ -26,8 +26,8 @@ lowes = {
         }
         return 10-result%10;
     },
-    generateCoupon: function(code){
-        let preCheck = "47000"+pad(getRandomInt(0,55000),5,"0")+pad(code,4,"0");
-        return preCheck + this.getCheckDigit(preCheck);
+    generateCoupon: function(prefix, code){
+        let preCheck = String(prefix)+String(pad(getRandomInt(0,55000),5,"0"))+String(pad(code,4,"0"));
+        return preCheck + String(this.getCheckDigit(preCheck));
     }
 };
